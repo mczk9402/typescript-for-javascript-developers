@@ -23,7 +23,7 @@ type NonNullableTypes = NonNullable<NullableTypes>; //nullを取る
 
 // type NonNullable<T> = T extends null | undefined ? never : T;
 type a =
-  | (string extends null | undefined ? never : string) // true never
-  | (number extends null | undefined ? never : number) // true never
-  | (null extends null | undefined ? never : null) // false
-  | (undefined extends null | undefined ? never : undefined); // false
+  | (string extends null | undefined ? never : string) // true string
+  | (number extends null | undefined ? never : number) // true number
+  | (null extends null | undefined ? never : null) // false never
+  | (undefined extends null | undefined ? never : undefined); // never
